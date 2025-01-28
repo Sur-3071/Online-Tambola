@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>
+        Coin picker
+    </title>
+    <style>
+        
+        #done {
+            text-align: center;
+            /* Center text within the div */
+            background-color: #fff;
+            /* Optional: Background color for the main div */
+            padding-left: 400px;
+            /* Padding around the content */
+            border-radius: 10px;
+            /* Optional: Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Optional: Add a subtle shadow */
+        }
+
+        #coin {
+            padding-top: 80px;
+            font-size: 100px;
+            color: green;
+        }
+
+        #result {
+            padding-top: 20px;
+            font-size: 20px;
+            /* padding-left: 10px; */
+        }
+
+        button {
+            background-color: pink;
+            border-color: green;
+            border-radius: 10%;
+            font-size: 50px;
+            background-color: aqua;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            top: 100px;
+            left: 100px;
+            border: 1px solid black;
+            border-radius: 50px;
+            box-shadow: 1px 1px 25px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: rgb(77, 230, 77);
+        }
+
+        .col1 {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: rgb(248, 179, 179);
+        }
+
+        #btn {
+            padding-top: 30px;
+        }
+
+        #auto {
+            height: 30px;
+            width: 30px;
+        }
+
+        #tog {
+            padding-top: 40px;
+        }
+
+        /* Rounded sliders */
+    </style>
+</head>
+
+<body>
+    <h1 align="center" style="color: red;">TAMBOLA COIN PICKER</h1>
+    <div align="center" id="btn" class="btn1">
+        <button type="button" onclick="coin()">Generate Coin</button>
+    </div>
+    <div align="center" id="tog">
+        <table>
+            <tr>
+                <th>
+                    <h5>Automatic</h5>
+                </th>
+                <th>
+                    <h5>Speed</h5>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="auto" onclick="Auto()">
+                </td>
+                <td>
+                    <select id="speed">
+                        <option value="1000">1 Second</option>
+                        <option value="2000">2 Second</option>
+                        <option value="3000">3 Second</option>
+                        <option value="4000">4 Second</option>
+                        <option value="5000">5 Second</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="coin" align="center">Game Start</div>
+    <div id="result" align="center"></div>
+    <div id="done" align="center">
+
+    </div>
+</body>
+<script src="coin picker.js"></script>
+
+</html>
