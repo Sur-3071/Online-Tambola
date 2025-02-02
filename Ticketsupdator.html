@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Environment Buttons</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            background-color: #003f7f;
+        }
+
+        .ticket {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: #ffffff;
+            padding: 1rem;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #007bff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        table td.selected {
+            background-color: rgb(52, 221, 52);
+            border-radius: 50%;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Data Base Ticket Updator</h1>
+    <div class="button-container">
+       
+        <button id="gen" class="button">Click For New Tickets</button>
+    </div>
+
+    <div id="ticket" class="ticket" style="display: none;"></div>
+
+</body>
+<script type="module" src="ticketupdatejscode.js"></script>
+</html>
